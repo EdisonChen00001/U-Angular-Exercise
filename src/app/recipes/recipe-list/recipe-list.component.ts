@@ -18,8 +18,12 @@ export class RecipeListComponent implements OnInit {
   ngOnInit() {
   }
 
-  onRecipeSelected(recipe:Recipe){
-    this.recipeWasSelected.emit(recipe);
-  }    
+  onRecipeSelected(recipes:Recipe){
+    this.recipeWasSelected.emit(recipes);
+  }
+  
+  printTest(){
+    console.log("true");
+  }
 
 }

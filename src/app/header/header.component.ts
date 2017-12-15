@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   featureSelected = new EventEmitter<string>();
 
   onSelect(feature:string){
-    this.featureSelected.emit(feature)
+    this.featureSelected.emit(feature);
   }
   constructor() { }
 
