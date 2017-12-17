@@ -7,20 +7,19 @@ import { RecipeService } from './recipe.service';
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.css'],
-  providers: [RecipeService]
+  providers: [ RecipeService ]
 })
 export class RecipesComponent implements OnInit {
 
-  @Output() recipeWasSelected = new EventEmitter<Recipe>();
-  recipes:Recipe[];
+  selectedRecipe:Recipe;
   
-  constructor(private recipeService:RecipeService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.recipes = this.recipeService.getRecipes();
+    //this.recipes = this.recipeService.getRecipes();
   }
   onRecipeSelected(recipe:Recipe){
-    this.recipeWasSelected.emit(recipe);
+    //this.recipeWasSelected.emit(recipe);
   }
 
 }
